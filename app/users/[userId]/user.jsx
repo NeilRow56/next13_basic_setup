@@ -1,19 +1,33 @@
 import Image from 'next/image'
+import Tweet from './tweet'
 
 const User = ({ user }) => {
+  console.log(user)
   return (
-    <section className='m-4 py-4'>
-      <div className='center'>
+    <section className='my-6 mx-8 flex gap-20'>
+      <div>
         <div className='relative h-40 w-40 rounded-full'>
           <Image
             src={user?.imageUrl}
+            height={130} width={130}
             alt={user?.name}
             style={{ objectFit: 'cover' }}
-            fill
+            priority
+            
           />
         </div>
         <h1 className='text-xl font-bold'>{user?.name}</h1>
         <p className='text-sm text-stone-400'>{user?.email}</p>
+      </div>
+      <div className='grow'>
+        <h2 className='text-2xl font-semibold tracking-tight text-stone-600'>
+          Recent Tweets
+        </h2>
+        <ul>
+          {user.tweets.map(tweet => (
+            <Tweet key={tweet.id} tweet={tweet} />
+          ))}
+        </ul>
       </div>
     </section>
   )
