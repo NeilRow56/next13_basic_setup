@@ -1,13 +1,11 @@
-import React from "react";
-
-const Header = () => {
+const Footer = () => {
   return (
-    <div className="flex bg-gray-600 h-12 items-center text-white">
-      <div className="w-[800px] mx-auto flex justify-center">
-        <div className="first_link"> Footer One</div>
+    <footer className="z-10 bg-stone-300 py-4 text-center text-white">
+      <div className="center">
+        <p className="text-sm uppercase">NextJS 13 Demo</p>
       </div>
-    </div>
+    </footer>
   );
 };
 
-export default Header;
+export default Footer;

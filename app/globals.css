@@ -6,6 +6,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer base {
   #__next {
     @apply contents;
@@ -16,10 +20,20 @@
   }
 
   body {
-    @apply bg-gray-300;
+    @apply flex h-full flex-col;
   }
 
   main {
     @apply flex-1;
   }
+
+  .section {
+    @apply py-24;
+  }
+
+  .center {
+    @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
 }
+
+/* h-[calc(100vh_-_96px)] */
