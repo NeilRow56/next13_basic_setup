@@ -40,7 +40,7 @@ const Tweet = ({ tweet }) => {
               <HeartIcon className='w-7 h-7 text-red-500' />
             )}
           </button>
-          <span className='text-sm'>{likes}</span>
+          <span className='text-sm w-10 px-1 text-right'>{likes}</span>
         </div>
       </div>
     </li>

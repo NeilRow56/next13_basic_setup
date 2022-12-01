@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Tweet from './tweet'
 
 const User = ({ user }) => {
-  console.log(user)
+  
   return (
     <section className='my-6 mx-8 flex gap-20'>
       <div>
