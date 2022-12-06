@@ -1,6 +1,7 @@
 import "./globals.css";
 import Header from "./header";
 import Footer from "./footer";
+import Provider from '../components/provider'
 // import Sidebar from "./sidebar";
 
 export default function RootLayout({ children }) {
@@ -13,10 +14,13 @@ export default function RootLayout({ children }) {
       <head />
 
       <body>
+        <Provider>
         <Header />
+        
         {/* <Sidebar /> */}
         <main>{children}</main>
         <Footer />
+        </Provider>
       </body>
     </html>
   );

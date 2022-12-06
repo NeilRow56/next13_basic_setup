@@ -1,3 +1,5 @@
+"use client"
+
 import Image from 'next/image'
 import Tweet from './tweet'
 
@@ -9,11 +11,13 @@ const User = ({ user }) => {
         <div className='relative h-40 w-40 rounded-full'>
           <Image
             src={user?.imageUrl}
-            height={130} width={130}
             alt={user?.name}
             style={{ objectFit: 'cover' }}
+            fill
             priority
-            
+            sizes="(max-width: 768px) 5vw,
+              (max-width: 1200px) 10vw,
+              3vw"
           />
         </div>
         <h1 className='text-xl font-bold'>{user?.name}</h1>
